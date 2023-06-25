@@ -13,6 +13,23 @@ const images = [
   },
 ];
 
+images.forEach((image) => {
+  const itemEl = document.querySelector(".gallery");
+  itemEl.insertAdjacentHTML(
+    "afterbegin",
+    `<li><img src = "${image.url}" alt = "${image.alt}" width = "360" ></li>`
+  );
+});
+
+// const itemEl = document.querySelector(".gallery");
+// let liEl = "";
+// for (let i = 0; i < images.length; i += 1) {
+//   const image = images[i];
+//   liEl += `<li><img src = "${image.url}" alt = "${image.alt}" width = "500" ></li>`;
+// }
+
+// itemEl.insertAdjacentHTML("afterbegin", liEl);
+
 // for (let i = 0; i < images.length; i += 1) {
 //   const image = images[i];
 
@@ -26,12 +43,3 @@ const images = [
 //   const itemEl = document.querySelector(".gallery");
 //   itemEl.appendChild(liEl);
 // }
-
-const itemEl = document.querySelector(".gallery");
-let liEl = "";
-for (let i = 0; i < images.length; i += 1) {
-  const image = images[i];
-  liEl += `<li><img src = "${image.url}" alt = "${image.alt}" width = "500" ></li>`;
-}
-
-itemEl.insertAdjacentHTML("afterbegin", liEl);
