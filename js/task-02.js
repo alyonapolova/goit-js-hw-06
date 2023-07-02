@@ -7,13 +7,13 @@ const ingredients = [
   "Condiments",
 ];
 
+const navEl = document.querySelector("#ingredients");
 const ingredientLiEl = ingredients.map((ingredient) => {
-  const navEl = document.querySelector("#ingredients");
-  return navEl.insertAdjacentHTML(
-    "afterbegin",
-    `<li class = "item"> ${ingredient} </li>`
-  );
+  const liEl = `<li class = "item"> ${ingredient} </li>`;
+  return liEl;
 });
+
+navEl.insertAdjacentHTML("afterbegin", ingredientLiEl.join(""));
 
 // for (let i = 0; i < ingredients.length; i += 1) {
 //   const newLiEl = document.createElement("li");
