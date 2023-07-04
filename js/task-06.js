@@ -11,6 +11,7 @@ function checkForm(event) {
     // console.log("ok");
   } else {
     // console.log("not ok");
+
     validationInput.classList.remove("valid");
     validationInput.classList.add("invalid");
   }
