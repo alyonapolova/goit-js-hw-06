@@ -9,11 +9,20 @@ const ingredients = [
 
 const navEl = document.querySelector("#ingredients");
 const ingredientLiEl = ingredients.map((ingredient) => {
-  const liEl = `<li class = "item"> ${ingredient} </li>`;
+  const liEl = document.createElement("li");
+  liEl.classList.add("item");
+  liEl.textContent = `${ingredient}`;
   return liEl;
 });
+navEl.append(...ingredientLiEl);
 
-navEl.insertAdjacentHTML("afterbegin", ingredientLiEl.join(""));
+// const navEl = document.querySelector("#ingredients");
+// const ingredientLiEl = ingredients.map((ingredient) => {
+//   const liEl = `<li class = "item"> ${ingredient} </li>`;
+//   return liEl;
+// });
+
+// navEl.insertAdjacentHTML("afterbegin", ingredientLiEl.join(""));
 
 // for (let i = 0; i < ingredients.length; i += 1) {
 //   const newLiEl = document.createElement("li");
